@@ -26,8 +26,8 @@ a {
     margin: 0px;
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
 }
 
 a:focus {
@@ -36,7 +36,7 @@ a:focus {
 
 a:hover {
     text-decoration: none;
-  color: #f17734;
+    color: #f17734;
 }
 
 /*---------------------------------------------*/
@@ -146,11 +146,8 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #f17734;
-  background: -webkit-linear-gradient(-135deg, #f7cfbd, #f17734);
-  background: -o-linear-gradient(-135deg, #f7cfbd, #f17734);
-  background: -moz-linear-gradient(-135deg, #f7cfbd, #f17734);
-  background: linear-gradient(-135deg, #f7cfbd, #f17734);
+  background-image: url('https://www.impactlab.org.uk/images/impact-bg.jpg');
+  background-size: cover;
 }
 
 .wrap-login100 {
@@ -177,8 +174,6 @@ iframe {
 }
 
 .login100-pic img {
-  margin-top: 77px;
-  width: 200px;
   max-width: 100%;
 }
 
