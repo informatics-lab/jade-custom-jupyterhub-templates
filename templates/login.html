@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>{% block title %}JupyterHub - Login{% endblock %}</title>
+	<title>{% block title %}Pangeo - Login{% endblock %}</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -21,12 +21,12 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic" data-tilt>
-					<img src="{{ static_url("custom/images/jupyter.svg") }}" alt="Jupyter">
+					<img src="https://www.impactlab.org.uk/uploads/events/water_resilience_4-image(850x1147-crop).png" alt="Water resilience challenge">
 				</div>
 
 				<form class="login100-form validate-form">
 					<span class="login100-form-title">
-						<img src="{{ static_url("custom/images/jade-full.png") }}" id="jade-logo" alt="Jade">
+						<img src="https://raw.githubusercontent.com/pangeo-data/branding/master/logo/pangeo_simple_logo.png" id="jade-logo" alt="Pangeo">
 					</span>
 
 
@@ -35,9 +35,7 @@
 					{% elif login_service %}
 
 					<div class="logon100-form-info">
-						Welcome to <a href="http://www.informaticslab.co.uk/projects/jade.html" target="_new">Jade</a>, a data analysts platform for use by Met Office staff and partners.<br /><br />
-						This service is an instance of <a href="https://pangeo-data.github.io" target="_new">Pangeo</a>.<br /><br />
-						<i>For assistance contact <a href="mailto:hello@informaticslab.co.uk">hello@informaticslab.co.uk</a></i>
+						Welcome to our <a href="https://pangeo.io/" target="_new">Pangeo</a>, a stack of tools for use during the <a href="https://www.impactlab.org.uk/events/view/take-on-the-challenge-water-resilience">Water Resilience Challenge</a>.<br /><br />
 					</div>
 					<div class="container-login100-form-btn">
 					  <a role="button" class='login100-form-btn' href='{{authenticator_login_url}}'>
