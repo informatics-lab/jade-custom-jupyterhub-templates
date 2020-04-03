@@ -31,15 +31,15 @@
 					</span> {% if custom_html %} {{ custom_html | safe }} {% elif login_service %}
 
                     <div class="logon100-form-info">
-                        Welcome to <em>COVID-19 Response Pangeo</em>, a data analysts platform for use by COVID-19 researchers.
-                        <br /><br /> This service is an instance of <a href="https://pangeo-data.github.io" target="_new">Pangeo</a>.<br /><br />
-                        <i>For assistance contact <a
-								href="mailto:hello@informaticslab.co.uk">hello@informaticslab.co.uk</a></i> With thanks to Microsoft, the Met Office and the EU ERDF form making this possible.
+                        Welcome to <em>COVID-19 response Pangeo</em>, a data analysts platform for use by COVID-19 researchers.<br /><br /> This service is an instance of <a href="https://pangeo-data.github.io"
+                            target="_new">Pangeo</a>.<br /><br />
+                        <i>For assistance contact <a href="mailto:hello@informaticslab.co.uk">hello@informaticslab.co.uk</a></i>
+                        With thanks to Microsoft, Met Office and the EU ERDF for making this possiable.
                     </div>
                     <div class="container-login100-form-btn">
                         <a role="button" class='login100-form-btn' href='{{authenticator_login_url}}'>
-							Sign in with {{login_service}}
-						</a>
+						Sign in with {{login_service}}
+					  </a>
                     </div>
                     {% else %}
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
