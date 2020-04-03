@@ -1,104 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>{% block title %}JupyterHub - Login{% endblock %}</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	{% block stylesheet %}
-	<link rel="stylesheet" type="text/css" href="{{ static_url("custom/css/util.css") }}">
-	<link rel="stylesheet" type="text/css" href="{{ static_url("custom/css/main.css") }}">
-	{% endblock %}
-<!--===============================================================================================-->
+    <title>{% block title %}JupyterHub - Login{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    {% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{{ static_url(" custom/css/util.css ") }}">
+    <link rel="stylesheet" type="text/css" href="{{ static_url(" custom/css/main.css ") }}"> {% endblock %}
+    <!--===============================================================================================-->
 </head>
+
 <body>
 
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<div class="login100-pic" data-tilt>
-					<img src="{{ static_url("custom/images/jupyter.svg") }}" alt="Jupyter">
-				</div>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic" data-tilt>
+                    <img src="{{ static_url(" custom/images/jupyter.svg ") }}" alt="Jupyter">
+                </div>
 
-				<form class="login100-form validate-form">
-					<span class="login100-form-title">
+                <form class="login100-form validate-form">
+                    <span class="login100-form-title">
 						<img src="{{ static_url("custom/images/jade-full.png") }}" id="jade-logo" alt="Jade">
-					</span>
+					</span> {% if custom_html %} {{ custom_html | safe }} {% elif login_service %}
 
-
-					{% if custom_html %}
-					{{ custom_html | safe }}
-					{% elif login_service %}
-
-					<div class="logon100-form-info">
-						Welcome to <a href="http://www.informaticslab.co.uk/projects/jade.html" target="_new">Jade</a>, a data analysts platform for use by Met Office staff and partners.<br /><br />
-						This service is an instance of <a href="https://pangeo-data.github.io" target="_new">Pangeo</a>.<br /><br />
-						<i>For assistance contact <a href="mailto:hello@informaticslab.co.uk">hello@informaticslab.co.uk</a></i>
-					</div>
-					<div class="container-login100-form-btn">
-					  <a role="button" class='login100-form-btn' href='{{authenticator_login_url}}'>
-						Sign in with {{login_service}}
-					  </a>
-					</div>
-					{% else %}
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input
-							id="username_input"
-							type="text"
-							autocapitalize="off"
-							autocorrect="off"
-							class="input100"
-							name="username"
-							val="{{username}}"
-							tabindex="1"
-							autofocus="autofocus"
-							placeholder="Email"
-						/>
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
+                    <div class="logon100-form-info">
+                        Welcome to <em>COVID-19 Response Pangeo</em>, a data analysts platform for use by COVID-19 researchers.
+                        <br /><br /> This service is an instance of <a href="https://pangeo-data.github.io" target="_new">Pangeo</a>.<br /><br />
+                        <i>For assistance contact <a
+								href="mailto:hello@informaticslab.co.uk">hello@informaticslab.co.uk</a></i> With thanks to Microsoft, the Met Office and the EU ERDF form making this possible.
+                    </div>
+                    <div class="container-login100-form-btn">
+                        <a role="button" class='login100-form-btn' href='{{authenticator_login_url}}'>
+							Sign in with {{login_service}}
+						</a>
+                    </div>
+                    {% else %}
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input id="username_input" type="text" autocapitalize="off" autocorrect="off" class="input100" name="username" val="{{username}}" tabindex="1" autofocus="autofocus" placeholder="Email" />
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
-					</div>
+                    </div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input
-							type="password"
-							class="input100"
-							name="password"
-							id="password_input"
-							tabindex="2"
-							placeholder="Password"
-						/>
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input type="password" class="input100" name="password" id="password_input" tabindex="2" placeholder="Password" />
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
-					</div>
+                    </div>
 
-					<div class="container-login100-form-btn">
-						<input
-							type="submit"
-							id="login_submit"
-							class='login100-form-btn'
-							value='Sign In'
-							tabindex="3"
-						/>
-					</div>
-					{% endif %}
-				</form>
-			</div>
-		</div>
-	</div>
+                    <div class="container-login100-form-btn">
+                        <input type="submit" id="login_submit" class='login100-form-btn' value='Sign In' tabindex="3" />
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
 
-<!--===============================================================================================-->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="{{ static_url("custom/js/main.js") }}"></script>
+    <!--===============================================================================================-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="{{ static_url(" custom/js/main.js ") }}"></script>
 
 </body>
+
 </html>
