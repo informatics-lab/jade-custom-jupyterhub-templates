@@ -20,9 +20,9 @@ body, html {
 /*---------------------------------------------*/
 a {
     font-family: Roboto;
-    font-size: 14px;
+    font-size: inherit;
     line-height: 1.7;
-    color: #666666;
+    color: #003b71;
     margin: 0px;
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
@@ -36,6 +36,7 @@ a:focus {
 
 a:hover {
   color: #00a3b0;
+  text-decoration: none;
 }
 
 /*---------------------------------------------*/
@@ -47,8 +48,8 @@ p {
     font-family: Roboto;
     font-size: 16px;
     line-height: 1.7;
-    color: #666666;
-    margin: 0px;
+    color: #003b71;
+    margin-bottom: 1em;
 }
 
 ul, li {
@@ -169,7 +170,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 33px 130px 33px 95px;
+  padding: 30px;
 }
 
 /*------------------------------------------------------------------
@@ -181,7 +182,7 @@ iframe {
 
 .login100-pic img {
   margin-top: 77px;
-  width: 200px;
+  width: 150px;
   max-width: 100%;
 }
 
@@ -189,7 +190,7 @@ iframe {
 /*------------------------------------------------------------------
 [  ]*/
 .login100-form {
-  width: 290px;
+  width: 350px;
 }
 
 .login100-form-title {
@@ -198,14 +199,14 @@ iframe {
   color: #333333;
   line-height: 1.2;
   text-align: center;
-
   width: 100%;
   display: block;
-  padding-bottom: 54px;
 }
 
 .login100-form-title img {
-  height: 200px;
+  height: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .logon100-form-info {
@@ -347,7 +348,7 @@ iframe {
 
 @media (max-width: 992px) {
   .wrap-login100 {
-    padding: 33px 90px 33px 85px;
+    padding: 10px 90px 10px 85px;
   }
 
   .login100-pic {
