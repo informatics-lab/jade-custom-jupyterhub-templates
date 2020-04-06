@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>{% block title %}JupyterHub - Login{% endblock %}</title>
+    <title>{% block title %}Pangeo - COVID-19 Response{% endblock %}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -22,26 +22,45 @@
         <div class="container-login100">
             <div class="wrap-login100">
                 <div class="login100-pic" data-tilt>
-                    <img src="{{ static_url("custom/images/jupyter.svg ") }}" alt="Jupyter">
+                    <img src="{{ static_url("custom/images/small_e_logo.png ") }}" alt="Pangeo logo">
+                    <img src="{{ static_url("custom/images/jupyter.svg ") }}" alt="Jupyter logo">
                 </div>
 
                 <form class="login100-form validate-form">
-                    <span class="login100-form-title">
+                    <!-- <span class="login100-form-title">
 						<img src="{{ static_url("custom/images/jade-full.png") }}" id="jade-logo" alt="Jade">
-					</span> {% if custom_html %} {{ custom_html | safe }} {% elif login_service %}
+                    </span>  -->
+                    
+                    {% if custom_html %} {{ custom_html | safe }} {% elif login_service %}
 
                     <div class="logon100-form-info">
-                        Welcome to <em>COVID-19 response Pangeo</em>, a data analysts platform for use by COVID-19 researchers.<br /><br /> This service is an instance of <a href="https://pangeo-data.github.io"
-                            target="_new">Pangeo</a>.<br /><br />
-                        <i>For assistance contact <a href="mailto:hello@informaticslab.co.uk">hello@informaticslab.co.uk</a></i>
-                        With thanks to Microsoft, Met Office and the EU ERDF for making this possiable.
+                        <p>
+                            Welcome to the 
+                            <span class="italic">
+                                COVID-19 response Pangeo
+                            </span>
+                            , a data analysis platform for use by COVID-19 researchers.</p>
+                        <p>This service is an instance of <a href="https://pangeo-data.github.io" target="_new">Pangeo</a>.</p>
+                        <p>
+                            <span class="italic">
+                                For assistance and to request a login, please contact<br />
+                                <a href="mailto:hello@informaticslab.co.uk">hello@informaticslab.co.uk</a>
+                            </span>.
+                        </p>
+                        <p>
+                            With thanks to Microsoft, The Met Office and the EU
+                            <abbr title="European Regional Development Fund">ERDF</abbr>
+                            for making this possible.
+                        </p>
                     </div>
                     <div class="container-login100-form-btn">
                         <a role="button" class='login100-form-btn' href='{{authenticator_login_url}}'>
 						Sign in with {{login_service}}
 					  </a>
                     </div>
+
                     {% else %}
+                    
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                         <input id="username_input" type="text" autocapitalize="off" autocorrect="off" class="input100" name="username" val="{{username}}" tabindex="1" autofocus="autofocus" placeholder="Email" />
                         <span class="focus-input100"></span>
@@ -63,6 +82,13 @@
                     </div>
                     {% endif %}
                 </form>
+            </div>
+            <div class="wrap-login100">
+                <span class="login100-form-title">
+                    <img src="{{ static_url("custom/images/Microsoft_Azure_Logo.png") }}" id="azure-logo" alt="Microsoft Azure Logo">
+                    <img src="{{ static_url("custom/images/Met_Office.png") }}" id="MO-logo" alt="Met Office Logo">
+                    <img src="{{ static_url("custom/images/ERDF-logo.png") }}" id="ERDF-logo" alt="ERDF Logo">
+                </span>
             </div>
         </div>
     </div>

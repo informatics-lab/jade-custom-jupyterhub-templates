@@ -35,8 +35,7 @@ a:focus {
 }
 
 a:hover {
-    text-decoration: none;
-  color: #f17734;
+  color: #00a3b0;
 }
 
 /*---------------------------------------------*/
@@ -46,7 +45,7 @@ h1,h2,h3,h4,h5,h6 {
 
 p {
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.7;
     color: #666666;
     margin: 0px;
@@ -113,16 +112,20 @@ iframe {
 [ Utility ]*/
 .txt1 {
   font-family: Roboto;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
   color: #999999;
 }
 
 .txt2 {
   font-family: Roboto;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
   color: #666666;
+}
+
+.italic {
+  font-style: italic;
 }
 
 
@@ -146,11 +149,11 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #f17734;
-  background: -webkit-linear-gradient(-135deg, #f7cfbd, #f17734);
-  background: -o-linear-gradient(-135deg, #f7cfbd, #f17734);
-  background: -moz-linear-gradient(-135deg, #f7cfbd, #f17734);
-  background: linear-gradient(-135deg, #f7cfbd, #f17734);
+  background: #003b71;
+  background: -webkit-linear-gradient(-135deg, #00a3b0, #003b71);
+  background: -o-linear-gradient(-135deg, #00a3b0, #003b71);
+  background: -moz-linear-gradient(-135deg, #00a3b0, #003b71);
+  background: linear-gradient(-135deg, #00a3b0, #003b71);
 }
 
 .wrap-login100 {
@@ -202,7 +205,7 @@ iframe {
 }
 
 .login100-form-title img {
-  width: 200px;
+  height: 200px;
 }
 
 .logon100-form-info {
@@ -321,7 +324,7 @@ iframe {
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background: #f17734;
+  background: #003b71;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -336,12 +339,6 @@ iframe {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
-
-.login100-form-btn:hover {
-  background: #333333;
-}
-
-
 
 /*------------------------------------------------------------------
 [ Responsive ]*/
