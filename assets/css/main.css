@@ -170,18 +170,19 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 30px;
+  padding: 30px 10px 30px 10px;
 }
 
 /*------------------------------------------------------------------
 [  ]*/
 .login100-pic {
-  width: 316px;
+  width: 450px;
   text-align: center;
 }
 
 .login100-pic img {
-  margin-top: 77px;
+  margin-top: 85px;
+  margin-left: 45px;
   width: 150px;
   max-width: 100%;
 }
@@ -190,7 +191,8 @@ iframe {
 /*------------------------------------------------------------------
 [  ]*/
 .login100-form {
-  width: 350px;
+  width: 380px;
+  margin-right: 10px;
 }
 
 .login100-form-title {
@@ -204,9 +206,9 @@ iframe {
 }
 
 .login100-form-title img {
-  height: 100px;
-  padding-left: 15px;
-  padding-right: 15px;
+  height: 75px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .logon100-form-info {

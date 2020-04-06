@@ -27,9 +27,6 @@
                 </div>
 
                 <form class="login100-form validate-form">
-                    <!-- <span class="login100-form-title">
-						<img src="{{ static_url("custom/images/jade-full.png") }}" id="jade-logo" alt="Jade">
-                    </span>  -->
                     
                     {% if custom_html %} {{ custom_html | safe }} {% elif login_service %}
 
@@ -43,9 +40,9 @@
                         <p>This service is an instance of <a href="https://pangeo-data.github.io" target="_new">Pangeo</a>.</p>
                         <p>
                             <span class="italic">
-                                For assistance and to request a login, please contact<br />
-                                <a href="mailto:hello@informaticslab.co.uk">hello@informaticslab.co.uk</a>.
-                            </span>
+                                For assistance and to request a login, please contact
+                            </span><br />
+                            <a href="mailto:hello@informaticslab.co.uk">hello@informaticslab.co.uk</a>.
                         </p>
                         <p>
                             With thanks to Microsoft, The Met Office and the EU
