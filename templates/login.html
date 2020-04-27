@@ -3,6 +3,7 @@
 
 <head>
     <title>{% block title %}Pangeo - COVID-19 Response{% endblock %}</title>
+    <link rel="icon" href="custom/images/small_e_logo.png" sizes="any" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -49,6 +50,11 @@
                             <abbr title="European Regional Development Fund">ERDF</abbr>
                             for making this possible.
                         </p>
+                        <p>
+                            Met Office data provided on this platform must be attributed to the Met Office as the source
+                            of the data by including the following attribution statement in any resulting products, publications or applications:
+                            "Contains Met Office data licensed under the Open Government Licence v3.0".
+                        </p>
                     </div>
                     <div class="container-login100-form-btn">
                         <a role="button" class='login100-form-btn' href='{{authenticator_login_url}}'>
@@ -82,9 +88,12 @@
             </div>
             <div class="wrap-login100">
                 <span class="login100-form-title">
+                    <img src="{{ static_url("custom/images/mo_black.svg") }}" id="MO-logo" alt="Met Office Logo">
+                    <div class="vertical-line"></div>
                     <img src="{{ static_url("custom/images/Microsoft_Azure_Logo.png") }}" id="azure-logo" alt="Microsoft Azure Logo">
-                    <img src="{{ static_url("custom/images/Met_Office.png") }}" id="MO-logo" alt="Met Office Logo">
+                    <div class="vertical-line"></div>
                     <img src="{{ static_url("custom/images/impact_lab.png") }}" id="impact-lab-logo" alt="Impact Lab Logo">
+                    <div class="vertical-line"></div>
                     <img src="{{ static_url("custom/images/ERDF-logo.png") }}" id="ERDF-logo" alt="ERDF Logo">
                 </span>
             </div>
