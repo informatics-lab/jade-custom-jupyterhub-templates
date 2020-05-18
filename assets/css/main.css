@@ -178,6 +178,8 @@ iframe {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 30px 10px 30px 10px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 /*------------------------------------------------------------------
